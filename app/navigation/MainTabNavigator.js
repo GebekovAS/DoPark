@@ -1,11 +1,12 @@
+/*eslint-disable*/
 import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
-
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
+import BookingScreen from '../screens/BookingScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import Colors from '../constants/Colors';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -25,12 +26,12 @@ HomeStack.navigationOptions = {
   ),
 };
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen,
+const BookingStack = createStackNavigator({
+  Booking: BookingScreen,
 });
 
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
+BookingStack.navigationOptions = {
+  tabBarLabel: 'Booking',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -55,6 +56,14 @@ SettingsStack.navigationOptions = {
 
 export default createBottomTabNavigator({
   HomeStack,
-  LinksStack,
+  BookingStack,
   SettingsStack,
-});
+},{
+  tabBarOptions:{
+    inactiveTintColor: Colors.red,
+    activeTintColor: Colors.primary,
+    style:{
+        borderTopColor: '#000',
+        backgroundColor: Colors.black,
+    }
+  }});

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { Icon } from 'expo';
 
@@ -10,7 +11,7 @@ export default class TabBarIcon extends React.Component {
         name={this.props.name}
         size={26}
         style={{ marginBottom: -3 }}
-        color={this.props.focused ? Colors.tabIconSelected : Colors.tabIconDefault}
+        color={this.props.focused ? Colors.primary: Colors.red}
       />
     );
   }
