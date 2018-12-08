@@ -1,51 +1,15 @@
+// @flow
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
-// import {connect} from 'react-redux';
+import BookingPart from 'Components/BookingPart';
 
-import Map from '../components/Map';
-import BookingTable from '../components/BookingTable';
-// import {getListMarkers} from '../actions/Booking';
-
-export default class BookingScreen extends React.Component {
+type Props = {};
+class BookingScreen extends React.Component<Props> {
   static navigationOptions = {
     header: null
-  };
-  constructor(props) {
-    super(props);
-    this.state = {
-      stage: 'map'
-    }
-  }
-
-  setStage = (newStage) => {
-    this.setState({stage: newStage})
-  }
+  }; // eslint-disable-next-line
   render() {
-    return (
-      <View style={styles.container}>
-        {this.state.stage === 'map'
-          ? <Map/>
-          : <BookingTable/>
-}
-      </View>
-    );
+    return <BookingPart />;
   }
 }
 
-const styles = StyleSheet.create({
-  container: { // eslint-disable-line
-    flex: 1,
-    backgroundColor: '#fff'
-  }
-});
-
-// const mapStateToProps = state => ({
-//   listMarkers:state.listMarkers,
-// }
-// );
-
-// const mapDispatchToProps = {
-//   getListMarkers
-// };
-
-// export default connect(mapStateToProps, mapDispatchToProps)(BookingScreen);
+export default BookingScreen;

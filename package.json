@@ -7,7 +7,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject",
-    "test": "node ./node_modules/jest/bin/jest.js --watchAll"
+    "test": "node ./node_modules/jest/bin/jest.js --watchAll",
+    "devtools": "react-devtools"
   },
   "jest": {
     "preset": "jest-expo"
@@ -27,12 +28,29 @@
     "reselect": "^4.0.0"
   },
   "devDependencies": {
+    "@babel/preset-flow": "^7.0.0",
     "babel-eslint": "^10.0.1",
+    "babel-plugin-module-resolver": "^3.1.1",
     "babel-preset-expo": "^5.0.0",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react-native": "^4.0.1",
     "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.3.0",
     "eslint-config-react-native": "^4.0.0",
+    "eslint-import-resolver-alias": "^1.1.1",
+    "eslint-import-resolver-babel-module": "^4.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-module-resolver": "^0.8.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
     "flow-bin": "^0.87.0",
     "jest-expo": "^31.0.0",
-    "prop-types": "^15.6.2"
+    "prettier": "^1.15.3",
+    "prop-types": "^15.6.2",
+    "react-devtools": "^3.4.3",
+    "remote-redux-devtools": "^0.5.14",
+    "remotedev-server": "^0.3.1"
   }
 }

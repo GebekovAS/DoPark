@@ -1,10 +1,3 @@
-
-export const GET_LIST_MARKERS = "GET_LIST_MARKERS";
-export const GET_MARKERS_SUCCESS = "GET_MARKERS_SUCCESS";
-export const GET_MARKERS_FAILED = "GET_MARKERS_FAILED";
-export const GET_PLACE = "GET_PLACE";
-export const GET_PLACE_SUCCESS = "GET_PLACE_SUCCESS";
-export const GET_PLACE_FAILED = "GET_PLACE_FAILED";
-export const GET_BOOKING_TABLES = "GET_BOOKING_TABLES";
-export const SET_BOOKING_TABLES = "SET_BOOKING_TABLES";
-export const SET_BOOKING_STAGE = "SET_BOOKING_STAGE";
+/*eslint-disable */
+import * as BookingPart from './BookingPart/index';
+export default { ...BookingPart };
